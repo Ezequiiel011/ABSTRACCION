@@ -1,0 +1,24 @@
+from abc import ABC, abstractmethod
+
+# Clase abstracta Pago
+class Pago(ABC):
+    @abstractmethod
+    def procesar_pago(self):
+        pass
+
+# Clase concreta TarjetaCredito
+class TarjetaCredito(Pago):
+    def procesar_pago(self):
+        print("Procesando pago con tarjeta de crédito.")
+
+# Clase concreta PayPal
+class PayPal(Pago):
+    def procesar_pago(self):
+        print("Procesando pago con PayPal.")
+
+# Prueba de las clases
+pago_tarjeta = TarjetaCredito()
+pago_tarjeta.procesar_pago()
+
+pago_paypal = PayPal()
+pago_paypal.procesar_pago()
