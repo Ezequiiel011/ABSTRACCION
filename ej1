@@ -1,0 +1,36 @@
+from abc import ABC, abstractmethod
+
+# Clase abstracta Vehiculo
+class Vehiculo(ABC):
+    @abstractmethod
+    def mover(self):
+        pass
+
+    @abstractmethod
+    def detener(self):
+        pass
+
+# Clase concreta Coche
+class Coche(Vehiculo):
+    def mover(self):
+        print("El coche se está moviendo.")
+
+    def detener(self):
+        print("El coche se ha detenido.")
+
+# Clase concreta Bicicleta
+class Bicicleta(Vehiculo):
+    def mover(self):
+        print("La bicicleta está pedaleando.")
+
+    def detener(self):
+        print("La bicicleta se ha detenido.")
+
+# Prueba de las clases
+coche = Coche()
+coche.mover()
+coche.detener()
+
+bicicleta = Bicicleta()
+bicicleta.mover()
+bicicleta.detener()
