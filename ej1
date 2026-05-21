@@ -21,7 +21,7 @@ class Coche(Vehiculo):
 # Clase concreta Bicicleta
 class Bicicleta(Vehiculo):
     def mover(self):
-        print("La bicicleta está pedaleando.")
+        print("La bicicleta se esta moviendo.")
 
     def detener(self):
         print("La bicicleta se ha detenido.")
